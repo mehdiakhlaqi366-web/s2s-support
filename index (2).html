@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student to Student Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">S2S</span>
+      <span class="brand-name">Student to Student Support</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-active">Home</a>
+      <a href="support.html">Find an assistor</a>
+      <a href="service.html">Services</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Run by students, for students</p>
+      <h1>Stuck on a subject? <br>Ask someone who's already through it.</h1>
+      <p class="hero-sub">Student to Student Support connects you with senior students who offer free, friendly help with writing, speaking, grammar, and choosing the right subjects &mdash; whenever you need it, in your own words.</p>
+      <div class="hero-actions">
+        <a href="support.html" class="btn btn-primary">Find your assistor</a>
+        <a href="#how-it-works" class="btn btn-ghost">How it works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">student assistors</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">support tracks &mdash; NAP, Stage&nbsp;1, Stage&nbsp;2</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">peer-led, zero judgement</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-inner">
+      <h2>Three ways to land on the right person</h2>
+      <div class="how-grid">
+        <div class="how-card">
+          <span class="how-tag">Search</span>
+          <p>Type what you're after &mdash; a subject, a skill, even just "speaking" &mdash; and the directory narrows itself.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-tag">Filter</span>
+          <p>Tap a service track or support area chip to browse by category instead of typing.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-tag">Connect</span>
+          <p>Check an assistor's availability and subjects, then reach out directly by email &mdash; or ask our guide bot for a quick pointer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section class="how-it-works">
+    <div class="section-inner">
+      <h2>Not sure where to start?</h2>
+      <div class="how-grid">
+        <div class="how-card">
+          <span class="how-tag">New to the school</span>
+          <p>If you're a NAP student, Mehdi and Yaqoob can help with language, reading and writing while you settle in.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-tag">Stage 1 student</span>
+          <p>All three assistors offer Stage 1 subject support &mdash; from Digital Tech to English to Maths and Science.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-tag">Stage 2 student</span>
+          <p>Mehdi and Ali cover Stage 2 subjects and exam prep, including pathway advice for life after school.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>Student to Student Support &mdash; a peer program at Thebarton Senior College.</p>
+    <p class="footer-sub">Run by students. No bookings needed &mdash; just reach out directly.</p>
+  </div>
+</footer>
+
+<!-- Guide bot (Ali) -->
+<button class="chat-launcher" id="chatLauncher" aria-label="Open guide chat" aria-expanded="false">
+  <svg class="chat-chat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <svg class="chat-close-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel" hidden>
+  <div class="chat-header">
+    <div class="chat-avatar">S</div>
+    <div class="chat-header-text">
+      <div class="chat-name">Sana &middot; Guide bot</div>
+      <div class="chat-status"><span class="dot"></span> Here to help you find an assistor</div>
+    </div>
+  </div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <form class="chat-input-row" id="chatForm">
+    <input type="text" id="chatInput" placeholder="Ask me anything…" aria-label="Type a message" autocomplete="off">
+    <button type="submit" class="chat-send-btn" aria-label="Send message">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11.5L21 3l-8.5 18-2.5-7.5L3 11.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    </button>
+  </form>
+</div>
+
+<script src="chatbot.js"></script>
+</body>
+</html>
